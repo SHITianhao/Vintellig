@@ -1,0 +1,10 @@
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+build/
+.idea/
+app/build/*
+app/app.iml
+local.properties
+gradlew.bat
+.gradle/
+gradle/

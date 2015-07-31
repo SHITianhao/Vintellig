@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="LightBlue_50">#E1F5FE</color>
+    <color name="LightBlue_100">#B3E5FC</color>
+    <color name="LightBlue_200">#81D4FA</color>
+    <color name="LightBlue_300">#4FC3F7</color>
+    <color name="LightBlue_400">#29B6F6</color>
+    <color name="LightBlue_500">#03A9F4</color>
+    <color name="LightBlue_600">#039BE5</color>
+    <color name="LightBlue_700">#0288D1</color>
+    <color name="LightBlue_800">#0277BD</color>
+    <color name="LightBlue_900">#01579B</color>
+    <color name="Red_500">#F44336</color>
+    <color name="Grey_900">#212121</color>
+    <color name="Teal_A400">#1DE9B6</color>
+</resources>

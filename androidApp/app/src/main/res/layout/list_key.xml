@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    tools:context=".ManagerActivity">
+
+    <!-- user name -->
+    <TextView
+        android:id="@+id/owner_name_label"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:textColor="#DEE9F2"
+        android:textSize="18dp"
+        android:background="@color/LightBlue_900"
+        android:text="Owner's Name"/>
+    <TextView
+        android:id="@+id/owner_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#DEE9F2"
+        android:layout_toRightOf="@+id/owner_name_label"
+        android:layout_toLeftOf="@+id/key_delete"
+        android:textSize="18dp"/>
+
+    <!-- start time-->
+    <TextView
+        android:id="@+id/key_start_label"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:textColor="#DEE9F2"
+        android:layout_below="@+id/owner_name_label"
+        android:textSize="18dp"
+        android:background="@color/LightBlue_900"
+        android:text="Start Time"/>
+    <TextView
+        android:id="@+id/key_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DEE9F2"
+        android:layout_toLeftOf="@+id/key_delete"
+        android:layout_toRightOf="@+id/key_start_label"
+        android:layout_below="@+id/owner_name"
+        android:textSize="18dp"/>
+
+    <!-- end time-->
+    <TextView
+        android:id="@+id/key_end_label"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:textColor="#DEE9F2"
+        android:layout_below="@+id/key_start_label"
+        android:textSize="18dp"
+        android:background="@color/LightBlue_900"
+        android:text="End Time"/>
+    <TextView
+        android:id="@+id/key_end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DEE9F2"
+        android:layout_toLeftOf="@+id/key_delete"
+        android:layout_toRightOf="@+id/key_end_label"
+        android:layout_below="@+id/key_start"
+        android:textSize="18dp"/>
+
+    <!-- delete button-->
+    <ImageButton
+        android:id="@+id/key_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/delete"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/key_end_label"/>
+
+</RelativeLayout>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ShareAccessActivity">
+    <android.support.v7.widget.CardView
+        android:id="@+id/edit_email_card"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:background="@color/LightBlue_900"
+                android:textColor="#DEE9F2"
+                android:text="Destination"/>
+            <EditText
+                android:id="@+id/input_email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="input the invitee's name here…"
+                android:background="#DEE9F2" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/edit_message_card"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        card_view:cardCornerRadius="4dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:background="@color/LightBlue_900"
+                android:textColor="#DEE9F2"
+                android:text="Your Message"/>
+            <EditText
+                android:id="@+id/input_message"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="@string/input_message"
+                android:background="#DEE9F2" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/select_start_date"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        card_view:cardCornerRadius="4dp"
+        android:background="#DEE9F2">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/start_date_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:background="@color/LightBlue_900"
+                android:textColor="#DEE9F2"
+                android:text="Start Day And Time"/>
+            <TextView
+                android:id="@+id/start_date"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:gravity="center"
+                android:layout_below="@+id/start_date_label"
+                android:layout_toLeftOf="@+id/select_start_date_button"
+                android:background="#DEE9F2"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_today_black_36dp"
+                android:background="#DEE9F2"
+                android:contentDescription="pick_day"
+                android:layout_below="@+id/start_date_label"
+                android:layout_alignParentRight="true"
+                android:id="@+id/select_start_date_button"
+                android:onClick="showStartDatePickerDialog"/>
+            <TextView
+                android:id="@+id/start_time"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:gravity="center"
+                android:layout_below="@+id/start_date"
+                android:layout_toLeftOf="@+id/select_start_time_button"
+                android:background="#DEE9F2" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_schedule_black_36dp"
+                android:background="#DEE9F2"
+                android:contentDescription="pick_day"
+                android:layout_below="@+id/select_start_date_button"
+                android:layout_alignParentRight="true"
+                android:id="@+id/select_start_time_button"
+                android:onClick="showStartTimePickerDialog"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/select_end_date"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        card_view:cardCornerRadius="4dp"
+        android:background="#DEE9F2">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/end_date_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:background="@color/LightBlue_900"
+                android:textColor="#DEE9F2"
+                android:text="End Day And Time"/>
+            <TextView
+                android:id="@+id/end_date"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:gravity="center"
+                android:layout_below="@+id/end_date_label"
+                android:layout_toLeftOf="@+id/select_end_date_button"
+                android:background="#DEE9F2"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_today_black_36dp"
+                android:background="#DEE9F2"
+                android:contentDescription="pick_day"
+                android:layout_below="@+id/end_date_label"
+                android:layout_alignParentRight="true"
+                android:id="@+id/select_end_date_button"
+                android:onClick="showEndDatePickerDialog"/>
+            <TextView
+                android:id="@+id/end_time"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:gravity="center"
+                android:layout_below="@+id/end_date"
+                android:layout_toLeftOf="@+id/select_end_time_button"
+                android:background="#DEE9F2" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_schedule_black_36dp"
+                android:background="#DEE9F2"
+                android:contentDescription="pick_day"
+                android:id="@+id/select_end_time_button"
+                android:layout_below="@+id/select_end_date_button"
+                android:layout_alignParentRight="true"
+                android:onClick="showEndTimePickerDialog"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:id="@+id/share"
+        android:text="@string/share_button"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:onClick="shareClick"/>
+    <TextView
+        android:id="@+id/share_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="You could share your access with your friends!"/>
+
+</LinearLayout>
